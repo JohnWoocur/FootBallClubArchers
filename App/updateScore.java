@@ -17,13 +17,11 @@ import java.util.Scanner;
                 System.out.println("New Updated Score is :"+newScore);
 
 
-                
-                // Specify the directory where club data files are stored.
                 String dataDirectory = ".\\ClubMoreDetails\\";
 
            
-                // Update the club's score and save the data to a text file.
-                updateClubScore(dataDirectory, clubName, newScore);
+
+                updateClubScore(dataDirectory, clubName, newScore);     // Update the club's score and save the data to a text file.
                 
                 
               System.out.println("Do you want update score again(y/n):");

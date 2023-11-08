@@ -24,7 +24,7 @@ public class DisplayStatistic {
 		                display();
 		                break;
 		            case 'n':
-			         Menu.mainMenu();
+			         Menu.mainMenu(null);
 		                break;
 		            default:
 		                break;

@@ -5,7 +5,7 @@ import java.util.Scanner;
         
         
         public class updateScore {
-            public static void update(String[] args) {
+            public static void update() {
             	
             	Scanner scanner = new Scanner(System.in);
         	FileHandling.showClub();
@@ -24,7 +24,7 @@ import java.util.Scanner;
                char input = scanner.next().charAt(0);
                switch (input) {
                    case 'y' :
-                     update(args);
+                     update();
                        break;
 
                    case 'n' :

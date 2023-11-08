@@ -5,7 +5,7 @@ import java.util.Scanner;
 //import Statements
 
 public class Menu {
-    public static void main(String[] args) {
+    public static void mainMenu(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -25,40 +25,40 @@ public class Menu {
 
         switch (choice) {
             case 1:
-                
+                CreateClub.clubCreate();
                 break;
         
            case 2:
-                
+                delete.delete();
                 break;
 
             case 3:
-                
+            DisplayStatistic.display();
                 break;
 
             case 4:
-                
+            PremierTable.display(scan);
                 break;
 
             case 5:
-
+            System.out.println("Function not avaiable..");
                 break;
 
             case 6:
-
+                updateScore.update();
                 break;
 
             case 7:
-
+                System.out.println("Function not avaiable..");
                 break;
         
             case 8:
-
+                System.exit(0);
                 break;
 
             default:
             System.out.println("invalid option");
-break;
+            break;
 
         }
 

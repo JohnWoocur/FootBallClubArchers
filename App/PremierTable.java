@@ -1,25 +1,28 @@
+package App;
 
 import java.util.Scanner;
 import App.FileHandling;
 import App.Menu;
 
 
-public class DisplayPremierLeauge {
+public class PremierTable  {
+	private static final String Syestem = null;
+
 	public static void display(){
-		Scanner scanner = new Scanner(System.ln);
-	//FileHnadling.PremierLeauge();
+		Scanner scanner = new Scanner(System.in);
+		FileHandling.premierLeague();
 
 
-		Syestem.out.print("Please enter any character to go main menu :");
+		System.out.println("Please enter any character to go main menu :");
 		char c = scanner.next().charAt(0);
 		switch ("c"){
 			case "y":
-			    Menu.mainMenu();
+			    Menu.menu();
 			    break;
 			default:
-			     Menu.mainMenu();
+			 	Menu.menu();
 			     break;
 			 }
 			 scanner.close();
 }
-
+}

@@ -1,19 +1,23 @@
-//import java.util.------;
-//import App.--------;
+import java.util.Scanner;
+
+import App.Menu;
 
 
 public class Home {
 	public static void main(String[] args) {
-		//Scanner s1 = new Scanner(System.in);
-		//System.out.println("Welcome To EPL, Do you want to continue Y / N : ");
+		Scanner s1 = new Scanner(System.in);
+		System.out.print("Welcome To EPL, Do you want to continue Y / N : ");
+		String opt = s1.nextLine();
+		
 		
 
 		if (opt.equalsIgnoreCase("Y")) {
-			//Statements for Staring the project
+			Menu.menu();
 		}
 		else {
-			main(args);
+			System.out.println("System closed...");
 		}
+
 	}
 
 }

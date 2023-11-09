@@ -9,14 +9,15 @@ import App.Menu;
 public class DisplayStatistic {
     public static void display(){
 
-
+	
 	Scanner scanner = new Scanner(System.in);
-	System.out.println("Display clubs  Already Add");
-	System.out.println("Select club name : ");
+	FileHandling.showClub();
+	System.out.println(" ");
+	System.out.print("Select club name : ");
         String clubName = scanner.next();
         System.out.println(clubName);
         FileHandling.statics(clubName);
-
+		
          System.out.print("Do you want to go again (y/n) :");
 		        char c = scanner.next().charAt(0);
 		        switch (c) {
@@ -24,7 +25,7 @@ public class DisplayStatistic {
 		                display();
 		                break;
 		            case 'n':
-			         Menu.mainMenu();
+			         Menu.menu();
 		                break;
 		            default:
 		                break;

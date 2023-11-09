@@ -24,7 +24,7 @@ public class delete {
                 delete();
                 break;
             case 'n':
-          //      Menu.mainMenu();
+                Menu.menu();
                 break;
             default:
                 break;

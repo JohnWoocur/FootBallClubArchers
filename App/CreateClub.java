@@ -38,10 +38,13 @@ class Club {
 }
 
 public class CreateClub {
-    public static void clubCreate(String[] args) {
+    public static void clubCreate() {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            System.out.println("\t\t\t | Create football club | "); 
+            System.out.println("\t\t\t | -------------------- | "); 
+            System.out.println(""); 
             System.out.println("Enter Club Name:");
             String name = scanner.nextLine();
 
@@ -90,7 +93,8 @@ public class CreateClub {
             System.out.println("Do you want to add another club? (yes/no)");
             String choice = scanner.next();
             if (choice.equals("no")) {
-         //   	Menu.mainMenu();
+            	Menu.menu();
+                
                 break;
             }
             scanner.nextLine(); // Consume the newline

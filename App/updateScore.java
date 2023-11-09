@@ -1,11 +1,12 @@
 package App;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;  
+import java.util.Scanner; 
+ 
         
         
         public class updateScore {
-            public static void update(String[] args) {
+            public static void update() {
             	
             	Scanner scanner = new Scanner(System.in);
         	FileHandling.showClub();
@@ -24,11 +25,11 @@ import java.util.Scanner;
                char input = scanner.next().charAt(0);
                switch (input) {
                    case 'y' :
-                     update(args);
+                     update();
                        break;
 
                    case 'n' :
-                	   //Menu();
+                	   Menu.menu();
                        break;
 
 
@@ -46,10 +47,10 @@ import java.util.Scanner;
 
             public static void updateClubScore(String dataDirectory, String clubName, String newScore) {
                 try {
-                    // Construct the file path for the club's data file.
+                    
                     String filePath = dataDirectory + clubName + ".txt";
                     
-                    // Read the existing club data from the file.
+                  
                     File file = new File(filePath);
                     Scanner scanner = new Scanner(file);
                     ArrayList<String> clubData = new ArrayList<>();
@@ -58,11 +59,8 @@ import java.util.Scanner;
                         clubData.add(scanner.nextLine());
                     }
                     scanner.close();
-                    
-                    // Update the score in the data.
-                    clubData.set(5, newScore);
-                    
-                    // Write the updated data back to the file.
+
+                    clubData.set(5, newScore);                    
                     FileWriter fileWriter = new FileWriter(filePath);
                     for (String line : clubData) {
                         fileWriter.write(line + "\n");
@@ -70,7 +68,7 @@ import java.util.Scanner;
                     fileWriter.close();
                     
                     
-                    // Display the updated data (optional).
+                    // Display the updated data 
                     System.out.println("+------+"+"+-------+");
                     System.out.println("| Club |"+"| Points |");
                     System.out.println("+------+"+"+--------+");

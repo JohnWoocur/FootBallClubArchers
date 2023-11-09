@@ -92,7 +92,7 @@ public class FileHandling {
         
     }
 
-    public static void saveMoreDetails(String club_Name,String wins,String draws,String defeats,String goals,String scored,String points,String played){
+    public static void saveMoreDetails(String club_Name,int wins,int draws,int defeats,int goalsReceived,int points,int matchesPlayed,int matchesPlayed2){
         //if(fh.checkClub(club_Name)){
         File folderA = new File(pathMore);
         if(!folderA.exists()){
@@ -105,10 +105,10 @@ public class FileHandling {
             fw.write(wins+"\n");
             fw.write(draws+"\n");
             fw.write(defeats+"\n");
-            fw.write(goals+"\n");
-            fw.write(scored+"\n");
+            fw.write(goalsReceived+"\n");
             fw.write(points+"\n");
-            fw.write(played+"\n");
+            fw.write(matchesPlayed+"\n");
+            fw.write(matchesPlayed2+"\n");
             fw.close();
             System.out.println("saved as document");
         } catch (Exception e) {
@@ -152,7 +152,7 @@ public class FileHandling {
             Scanner sc=new Scanner(file);
             while (sc.hasNextLine()) {
                 //pl.add(sc.nextLine());
-                File fileD = new File(path+sc.nextLine()+".txt");
+                File fileD = new File(pathMore+sc.nextLine()+".txt");
                 Scanner scc=new Scanner(fileD);
                 while (scc.hasNextLine()) {
                     cd.add(scc.nextLine());
